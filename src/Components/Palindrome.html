@@ -1,0 +1,39 @@
+<html>
+<head>
+	
+	<title>Check Palindrome</title>
+	<script>
+		
+		function myFunction()
+		{
+			var str = document.getElementById('textbox').value;
+			var result = R_Palindrome(str);
+			console.log('The Entered String "'+ str +'" is "'+result+'"');
+		}
+		
+		function R_Palindrome(str)
+		{
+			var orignalStr;
+			str = str.toUpperCase();
+			orignalStr = str;
+			str = str.split(''); 
+			str = str.reverse(); 
+			str = str.join(''); 
+			
+			var reverseStr = str;
+				
+			if(orignalStr == reverseStr){
+				return 'Palindrome'; 
+			}else{
+				return 'Not Palindrome';
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="textbox" />
+		<input type="button" onclick="myFunction()" value="Check Palindrome" />
+	</form>
+</body>
+</html> 
